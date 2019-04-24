@@ -191,3 +191,17 @@ alias shoot='tmux kill-session -t'
 toomanyfiles(){
   find . -maxdepth $1 -exec sh -c  "printf \"{}:\"; find \"{}\" -type f | wc -l" \; | sort -t: -k2rn | head -n25
 }
+
+# Source environment variables
+if [ -f ~/.environment ]; then
+    . ~/.environment
+fi
+
+# pyenv
+export PATH="~/.pyenv/bin:$PATH"
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
+
+set -o vi
+bind -m vi-command '"j":history-search-forward'
+bind -m vi-command '"k":history-search-backward'

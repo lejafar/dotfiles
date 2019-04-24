@@ -18,3 +18,6 @@ sudo apt-get install tmux
 sudo add-apt-repository -y ppa:jonathonf/vim
 sudo apt-get update
 sudo apt-get install -y vim
+
+# pyenv
+curl https://pyenv.run | bash
