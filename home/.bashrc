@@ -48,9 +48,9 @@ if [ "$color_prompt" = yes ]; then
     fi
 
 	RESET_COLOR='\[\033[0m\]'
-	PS1="${PROMPT_COLOR}\w $ ${RESET_COLOR}"
+	PS1="${PROMPT_COLOR}\u@\h \w $ ${RESET_COLOR}"
 else
-    PS1='\w $ '
+    PS1='\u@\h \w $ '
 fi
 
 #export LSCOLORS="exFxCxDxBxegedabagacad"
