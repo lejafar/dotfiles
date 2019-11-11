@@ -203,5 +203,3 @@ eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
 
 set -o vi
-bind -m vi-command '"j":history-search-forward'
-bind -m vi-command '"k":history-search-backward'
