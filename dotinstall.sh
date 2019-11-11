@@ -1,5 +1,6 @@
 #!/bin/bash
-sudo apt-get install -y ruby
+sudo apt-get update
+sudo apt-get install -y git ruby
 sudo gem install homesick
 homesick clone lejafar/dotfiles && homesick symlink dotfiles --force
 homesick clone lejafar/dotvim && homesick symlink dotvim
