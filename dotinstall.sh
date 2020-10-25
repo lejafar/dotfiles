@@ -25,7 +25,7 @@ source $HOME/.poetry/env
 sudo add-apt-repository -y ppa:jonathonf/vim
 sudo apt-get update
 sudo apt-get install -y vim
-vim +PluginInstall +qall # install Vundle plugins
+vim -c 'PluginInstall' -c 'qa!' # install Vundle plugins
 
 # prettier install
 sudo apt-get install -y nodejs npm
