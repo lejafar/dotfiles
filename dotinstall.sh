@@ -18,8 +18,7 @@ done
 source ~/.zshrc
 chsh -s /bin/zsh
 
-# pyenv
-curl https://pyenv.run | bash
+curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python
 
 # vim 8
 sudo add-apt-repository -y ppa:jonathonf/vim
