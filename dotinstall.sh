@@ -1,6 +1,6 @@
 #!/bin/bash
 sudo apt-get update
-sudo apt-get install -y git ruby tmux zsh
+sudo apt-get install -y git ruby tmux
 
 # homesick dotfiles
 sudo gem install homesick
@@ -8,6 +8,7 @@ homesick clone lejafar/dotfiles && homesick symlink dotfiles --force
 homesick clone lejafar/dotvim && homesick symlink dotvim
 
 # set up zsh & prezto
+sudo apt-get install -y zsh
 zsh
 git clone --recursive https://github.com/lejafar/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
 setopt EXTENDED_GLOB
@@ -20,9 +21,6 @@ chsh -s /bin/zsh
 # pyenv
 curl https://pyenv.run | bash
 
-# nvm
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.36.0/install.sh | bash
-
 # vim 8
 sudo add-apt-repository -y ppa:jonathonf/vim
 sudo apt-get update
@@ -30,9 +28,7 @@ sudo apt-get install -y vim
 vim +PluginInstall +qall # install Vundle plugins
 
 # prettier install
-source ~/.zshrc
-nvm install --lts
-nvm alias default node
+sudo apt-get install -y nodejs npm
 pushd ~/.vim/bundle/vim-prettier
 npm install
 popd
