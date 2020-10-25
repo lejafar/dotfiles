@@ -18,7 +18,8 @@ done
 source ~/.zshrc
 chsh -s /bin/zsh
 
-curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python
+curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python3 - --version 1.1.4
+source $HOME/.poetry/env
 
 # vim 8
 sudo add-apt-repository -y ppa:jonathonf/vim
@@ -31,3 +32,6 @@ sudo apt-get install -y nodejs npm
 pushd ~/.vim/bundle/vim-prettier
 npm install
 popd
+
+# install pyenv
+curl https://pyenv.run | bash
