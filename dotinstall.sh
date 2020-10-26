@@ -34,4 +34,4 @@ sudo npm install -g prettier
 curl https://pyenv.run | bash
 
 # install Vundle plugins
-vim +'PluginInstall --sync' +qa || true
+vim +PluginInstall +qall
