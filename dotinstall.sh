@@ -16,7 +16,7 @@ for rcfile in "${ZDOTDIR:-$HOME}"/.zprezto/runcoms/^README.md(.N); do
     ln -s "$rcfile" "${ZDOTDIR:-$HOME}/.${rcfile:t}"
 done
 source ~/.zshrc
-chsh -s /bin/zsh
+sudo chsh -s /bin/zsh
 
 curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python3 - --version 1.1.4
 source $HOME/.poetry/env
