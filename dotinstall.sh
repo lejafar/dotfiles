@@ -22,7 +22,6 @@ for rcfile in "${ZDOTDIR:-$HOME}"/.zprezto/runcoms/^README.md(.N); do
     ln -s "$rcfile" "${ZDOTDIR:-$HOME}/.${rcfile:t}"
 done
 source ~/.zshrc
-chsh -s /bin/zsh
 
 # install Vundle plugins
 vim +PluginInstall +qall
@@ -32,3 +31,7 @@ sudo add-apt-repository -y ppa:jonathonf/vim
 sudo apt-get update
 sudo apt-get install -y vim
 
+echo "######## All set! 🍌 ########"
+echo "Activate zsh as default shell:"
+echo "chsh -s /bin/zsh"
+echo "#############################"
